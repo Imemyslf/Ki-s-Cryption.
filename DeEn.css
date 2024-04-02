@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000000ac;
+}
+
+.nav_bar{
+    width:100%;
+    height: auto;
+    background-color: #000000d1;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left:3rem;
+    padding:10px;
+}
+.links a{
+    font-size:1.5rem;
+    color:white;
+}
