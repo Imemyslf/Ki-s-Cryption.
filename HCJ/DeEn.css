@@ -63,11 +63,16 @@ body{
     border-style: solid none solid none;
     /* border:3px solid #495057; */
     border-color: #6C757D;
-    padding: 10px;
+    /* padding: 13px; */
     position: relative;
     overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 }
 
+#container::-webkit-scrollbar{
+    height:0;
+}
 .slide{
     /* border:5px solid green; */
     width: 100%;
@@ -80,6 +85,7 @@ body{
     /* margin: 0 auto; */
     display: flex;
     justify-content: center;align-items: center;
+    padding: 10px;
 }
 .image img{
     width: 80%;
@@ -153,6 +159,7 @@ body{
 .controls a:hover{
     opacity: 1;
 }
+
 .center{
     padding:10px;
 }
