@@ -16,48 +16,60 @@
                 <a class="link">About</a>
             </div>
             <div class="l3">
-                <a class="link">Contact Us</a>
+                <a class="link">Contact-Us</a>
             </div>
         </div>
     </nav>
 
-    <div class="carasoul">
-        <input type="radio" name="slider" id="slider1">
-        <input type="radio" name="slider" id="slider2">
-        <input type="radio" name="slider" id="slider3">
-        <input type="radio" name="slider" id="slider4">
-        <div class="outerbox">
-            <div id="slides">
-                <div id="overflow">
-                    <div class="inner">
-                        <div class="slide slide_1">
-                            <div class="slide-content_1">
-                                <img src="" alt="" class="img_1">
-                                <p class="cont">Hello</p>
-                            </div>
-                        </div>
-                        <div class="slide slide_2">
-                            <div class="slide-content_2">
-                                <img src="" alt="" class="img_2">
-                                <p class="cont">There</p>
-                            </div>
-                        </div>
-                        <div class="slide slide_3">
-                            <div class="slide-content_3">
-                                <img src="" alt="" class="img_3">
-                                <p class="cont">Fella</p>
-                            </div>
-                        </div>
-                    </div>
+    <div class="main_container">
+        <div id="container">
+            <div class="slide" id="cont_1">
+                <div class="image">
+                    <img src="./images/fig-maDeEn.png" alt="Image of Ki's-cryption Gui." class="Crytion">
                 </div>
-                <div class="conntrols">
-                    <lable class="lacir"><span class="outercircle"><span class="innercircle"></span></span></lable>
-                    <lable class="lacir"><span class="outercircle"><span class="innercircle"></span></lable>
-                    <lable class="lacir"><span class="outercircle"><span class="innercircle"></span></lable>
-                    <lable class="lacir"><span class="outercircle"><span class="innercircle"></span></lable>
+                <div class="center c_1">
+                    <p class="content">Ki's-cryption Gui</p>
+                </div>
+            </div>
+            <div class="slide" id="cont_2">
+                <div class="image">
+                    <img src="./images/encrypt.png" alt="Image of Encryption Gui." class="e-Crytion">
+                </div>
+                <div class="center c_1">
+                    <p class="content">Encrypted  text</p>
+                </div>
+            </div>
+            <div class="slide" id="cont_3">
+                <div class="image">
+                    <img src="./images/decrypt.png" alt="Image of Decryption Gui." class="d-Crytion">
+                </div>
+                <div class="center c_1">
+                    <p class="content">Decrypted text</p>
                 </div>
             </div>
         </div>
+        <div class="controls">
+            
+                <a  href="#cont_1" class="btn_1">
+                </a>
+            
+                <a  href="#cont_2" class="btn_2">
+                </a>
+    
+                <a  href="#cont_3" class="btn_3">
+                </a>
+            
+        </div>
+        <button onclick="goPrev()" id="previous" class="button">
+            <img src="./images/next.png" alt="Previous button">
+        </button>
+        <button onclick="goNext()" id="next" class="button">
+            <img src="./images/next.png" alt="Next button">
+        </button>
     </div>
+    
+
+    
+    <script src="DeEn.js"></script>
 </body>
 </html>
