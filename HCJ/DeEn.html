@@ -21,7 +21,7 @@
         </div>
     </nav>
 
-    <div class="main_container">
+    <!-- <div class="main_container">
         <div id="container">
             <div class="slide" id="cont_1">
                 <div class="image">
@@ -59,12 +59,63 @@
             <img src="../images/next.png" alt="Previous button">
         </button>
         <button onclick="goNext()" id="next" class="button">
-            <img src="../images/next.png" alt="Next button">
+            <img src="./images/next.png" alt="Next button">
         </button>
+    </div> -->
+   <div class="container">
+    <div class="main_container">
+        <div class="m_c">
+            <div class="contain-list" id="list-contain">
+                <div class="slide" id="cont_1">
+                    <div class="image">
+                        <img src="../images/fig-maDeEn.png" alt="Image of Ki's-cryption Gui." class="Crytion">
+                    </div>
+                    <div class="center c_1">
+                        <p class="content">Ki's-cryption Gui</p>
+                    </div>
+                </div>
+                <div class="slide" id="cont_2">
+                    <div class="image">
+                        <img src="../images/encrypt.png" alt="Image of Encryption Gui." class="e-Crytion">
+                    </div>
+                    <div class="center c_1">
+                        <p class="content">Encrypted  text</p>
+                    </div>
+                </div>
+                <div class="slide" id="cont_3">
+                    <div class="image">
+                        <img src="../images/decrypt.png" alt="Image of Decryption Gui." class="d-Crytion">
+                    </div>
+                    <div class="center c_1">
+                        <p class="content">Decrypted text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="carousel-btns">
+        <button id="btn_1" onclick="Back()"><img src="../images/next.png" alt="image of an arrow" id ="btn_img"></button>
+        <button id="btn_2" onclick="Forward()"><img src="../images/next.png" alt="image of an arrow" id="img_btn"></button>
+    </div>
+    <div class="buttons">
+        <button type="button" onclick="showSlide('cont_1')" class="buttons">.</button>
+        <button type="button" onclick="showSlide('cont_2')" class="buttons">.</button>
+        <button type="button" onclick="showSlide('cont_3')" class="buttons">.</button>
+      </div>
+   </div>
     
-
-    
+    <div class="crypt_container">
+        <div class="main_crypt">
+            <div class="lr_container">
+                <div class="left_container">
+                    <textarea name="text" placeholder="Enter the text to be encrypted." id="encrypt" cols="30" rows="10"></textarea>
+                </div>
+                <div class="right_container">
+                    <textarea name="text" placeholder="Enter the text to be decrypted." id="decrypt" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="DeEn.js"></script>
 </body>
 </html>
