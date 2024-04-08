@@ -11,18 +11,18 @@
     <nav class="nav_bar">
         <div class="links">
             <div class="l1">
-                <a class="link">Home</a>
+                <a href="#Home" class="link">Home</a>
             </div>
             <div class="l2">
-                <a class="link">About</a>
+                <a href="#About" class="link">About</a>
             </div>
             <div class="l3">
-                <a class="link">Contact-Us</a>
+                <a href="#Contact-Us" class="link">Contact-Us</a>
             </div>
         </div>
     </nav>
- -->
-   <div class="container">
+
+   <div class="container" id="Home">
     <div class="main_container">
         <div class="m_c">
             <div class="contain-list" id="list-contain">
@@ -53,31 +53,41 @@
             </div>
         </div>
     </div>
-    
+
     <div class="carousel-btns">
-        <button id="btn_1" onclick="Back()"><img src="../images/next.png" alt="image of an arrow" id ="btn_img"></button>
-        <button id="btn_2" onclick="Forward()"><img src="../images/next.png" alt="image of an arrow" id="img_btn"></button>
+        <button type="button" id="btn_1" onclick="Back()"><img src="../images/next.png" alt="image of an arrow" id ="btn_img"></button>
+        <button type="button" id="btn_2" onclick="Forward()"><img src="../images/next.png" alt="image of an arrow" id="img_btn"></button>
     </div>
-    <div class="buttons">
-        <button type="button" onclick="showSlide('cont_1')" class="buttons">.</button>
-        <button type="button" onclick="showSlide('cont_2')" class="buttons">.</button>
-        <button type="button" onclick="showSlide('cont_3')" class="buttons">.</button>
-      </div>
+    <!-- <div class="buttons">
+        <button type="button" onclick="showSlide('cont_1')" class="btn_1">.</button>
+        <button type="button" onclick="showSlide('cont_2')" class="btn_2">.</button>
+        <button type="button" onclick="showSlide('cont_3')" class="btn_3">.</button>
+      </div> -->
    </div>
     
-    <div class="crypt_container">
+    <section class="crypt_container" id="About">
         <div class="main_crypt">
-            <div class="lr_container">
-                <div class="left_container">
-                    <textarea name="text" placeholder="Enter the text to be encrypted." id="encrypt" cols="30" rows="10"></textarea>
+            <div id="Content">
+                
+                <h4 class="name text">Ki's-Cryption</h4>
+                
+                <div class="lr_container">
+                    <div class="left_container">
+                        <p class="name text_1" >Decrypted Message</p>
+                        <textarea name="text"  placeholder="Enter the message to be encrypted.." id="encrypt" cols="" rows=""></textarea>
+                        <button type="button" onclick="encrypt()" class="btn" id="e_btn1">Encrypt</button>
+                    </div>
+                    <div class="right_container">
+                        <p class="name text_2" >Encypted Message</p>
+                        <textarea name="text"  placeholder="Enter the message to be decrypted.." id="decrypt" cols="" rows=""></textarea>
+                        <button type="button" onclick="decrypt()" class="btn" id="e_btn2">Decrypt</button>
+                    </div>
                 </div>
-                <div class="right_container">
-                    <textarea name="text" placeholder="Enter the text to be decrypted." id="decrypt" cols="30" rows="10"></textarea>
+                
                 </div>
-            </div>
         </div>
-    </div>
-
+    </section>
+    
     <script src="DeEn.js"></script>
 </body>
 </html>
