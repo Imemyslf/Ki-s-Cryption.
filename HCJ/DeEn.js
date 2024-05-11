@@ -17,26 +17,27 @@ function Forward(){
   }
 }
 
-let array;
+let encryptedText;
+let decryptedText;
 
 function encrypt(){
-  var text = document.getElementById('encrypt');
-  var message = text.value;
+  console.log('start_en');
+  var en_text = document.getElementById('encrypt');
+  console.log(en_text.value);
+  var message = en_text.value;
   console.log(message);
   let message_1 = message.split('');
-  array = new Array(message_1.length).fill('');
+  encryptedText = '';
   console.log(message_1);
   
   message_1.forEach((element, index) => {
     let asciivalue = message_1[index].charCodeAt(0); 
     console.log(asciivalue); 
-    array[index] = String.fromCharCode(asciivalue + 100);    
+    encryptedText += String.fromCharCode(asciivalue + 100);    
   });
-  console.log(array);
-  array = array.join('');
+  console.log(encryptedText);
+  en_text.value = '';  
   randomchar(3);
-
-  text.value = '';
   display_encrypt();
 }
 
@@ -49,43 +50,41 @@ function randomchar(string_len){
     random_str_1 += chars.charAt(Math.floor(Math.random() *  chars.length)); 
     random_str_2 += chars.charAt(Math.floor(Math.random() *  chars.length)); 
   }
-  array = random_str_1 + array + random_str_2;
-  console.log(array);
+  encryptedText = random_str_1 + encryptedText + random_str_2;
+  console.log(encryptedText);
 }
 
 function display_encrypt(){
-  var dis_text = document.getElementById('decrypt');
-  dis_text.textContent = array;
+  var dis_text = document.querySelector('#decrypt');
+  dis_text.value = encryptedText;
   
 }
 
-// let array;
-
 function decrypt(){
-  var text = document.getElementById('decrypt');
-  var message = text.value;
+  console.log('start_de');
+  var de_text = document.getElementById('decrypt');
+  console.log(de_text.value);
+  var message = de_text.value;
   message = message.slice(3,[(message.length)-3]);
   console.log(message);
   let message_1 = message.split('');
-  array = new Array(message_1.length).fill('');
+  decryptedText = '';
   console.log(message_1);
   
   message_1.forEach((element, index) => {
     let asciivalue = message_1[index].charCodeAt(0); 
     console.log(asciivalue); 
-    array[index] = String.fromCharCode(asciivalue - 100);    
+    decryptedText += String.fromCharCode(asciivalue - 100);    
   });
-  console.log(array);
-  array = array.join('');
-  // randomchar(3);
+  console.log(decryptedText);
 
-  text.value = '';
+  de_text.value = '';
   display_decrypt();
 }
 
 function display_decrypt(){
   var dis_text = document.getElementById('encrypt');
-  dis_text.value = array;
+  dis_text.value = decryptedText;
 
 }
 
